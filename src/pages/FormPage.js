@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import LoadScript from 'react-load-script';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
@@ -13,6 +12,7 @@ import Button from 'react-bootstrap/Button';
 
 function FormPage() {
   const [state, setState] = useState(null);
+  const [showBtn, setShowBtn] = useState(true);
   const [lga, setLga] = useState(null);
   const [show, setShow] = useState(false);
   const [showSuc, setshowSuc] = useState(false);
@@ -190,6 +190,7 @@ function FormPage() {
       .then(response => response.json())
       .then(data => {
         setshowSuc(true);
+        setShowBtn(false)
         setaTag(true);
       })
       .catch(error => {
@@ -206,9 +207,6 @@ function FormPage() {
     <>
       <Header />
       <div className="form-section">
-      <LoadScript
-        url="https://checkout.flutterwave.com/v3.js"
-      />
 
         <h1>Grab Your Seat</h1>
         <form onSubmit={handleSubmit}>
@@ -263,8 +261,9 @@ function FormPage() {
               <option>{interests}</option>
             ))}
           </select>
-
+              {showBtn && 
           <button type="submit">Submit</button>
+              }
           <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Error!</Modal.Title>
