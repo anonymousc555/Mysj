@@ -11,6 +11,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 function FormPage() {
+
   const [state, setState] = useState(null);
   const [showBtn, setShowBtn] = useState(true);
   const [lga, setLga] = useState(null);
@@ -291,7 +292,7 @@ function FormPage() {
         <Modal.Header closeButton>
           <Modal.Title>Success</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Your Profile has been succesfully created! Kindly click the make payment button below to buy your ticket</Modal.Body>
+        <Modal.Body>Your Profile has been succesfully created! Kindly click the make payment button below to buy your ticket. <br /> Dear Users, please do not leave the payments page for no reason until you have seen the success page thank you</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseSuc}>
             Close
