@@ -458,7 +458,8 @@ header ul li .nav-link{
 .infoFive,
 .mainFifth,
 .sixth,
-.subTxtSixth{
+.subTxtSixth,
+.last{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -648,4 +649,40 @@ header ul li .nav-link{
     font-size: 1.1rem;
     font-weight: 600;
   }
+}
+.last{
+  margin-top: 5rem;
+}
+.last .logo{
+  width: 300px;
+}
+.last h1{
+  width: 30rem;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: 'Noto Serif', serif;
+}
+.venue .loc{
+  font-family: 'Noto Serif', serif;
+  margin-top: 7rem;
+  font-size: 2.3rem;
+  width: 35rem;
+  text-align: center;
+}
+.venue .time{
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .last h1{
+    font-size: 2rem;
+    width: 23rem;
+  }
+  .venue .loc,
+  .venue .time{
+    font-size: 1.5rem;
+    width: 23rem;
+  }
+
 }

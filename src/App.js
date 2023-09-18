@@ -8,6 +8,7 @@ import InfoThree from './components/InfoThree'
 import InfoFour from './components/InfoFour'
 import Fifth from './components/Fifth'
 import Next from './components/Sixth'
+import Last from './components/Last'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <InfoFour />
       <Fifth />
       <Next />
+      <Last />
       <Footer />
     </>
   )
