@@ -1,9 +1,11 @@
 import React from 'react'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 function infoFive() {
   return (
     <>
-        <main className='infoFive'>
+        <main className='infoFive' data-aos="fade-up">
           <div className="mainFifth">
             <h3 className='fw-bold mt-3 text-center'>Alaigbo Youth Forum (AYF)</h3>
             <p>
@@ -14,7 +16,7 @@ function infoFive() {
             Nigeria.
             </p>
           </div>
-          <div className="subTxt">
+          <div className="subTxt"  data-aos="fade-up">
             <h1>
             OUR GUIDING
             PRINCIPLES:

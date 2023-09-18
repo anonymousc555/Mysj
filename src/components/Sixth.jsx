@@ -1,9 +1,11 @@
 import React from 'react'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 function Next() {
   return (
     <>
-      <main className='sixth'>
+      <main className='sixth' data-aos="fade-up">
         <h1>
         GOAL OF ALAIGBO YOUTH SUMMIT
         </h1>

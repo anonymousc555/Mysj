@@ -672,14 +672,29 @@ header ul li .nav-link{
   margin-right: 3rem;
 }
 @media screen and (max-width: 800px) {
+  .infoFive{
+    margin-left: .7rem;
+    align-items: center;
+  }
+  .subtxt{
+    align-items: center;
+  }
+  .sixth{
+    align-items: center;
+  }
   .sixth h1{
     font-size: 1.3rem;
   }
+  .sixth{
+    width: 100%;
+    align-items: center;
+  }
   .sixth .subTxtSixth{
-    width: 35rem;
+    width: 35rem; 
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
+    margin-right: 0
   }
 }
 @media screen and (max-width: 600px) {
@@ -688,6 +703,8 @@ header ul li .nav-link{
     text-align: center;
     font-size: 1.3rem;
     font-weight: 600;
+    margin-right: 0rem;
+
   }
 }
 @media screen and (max-width: 500px) {
