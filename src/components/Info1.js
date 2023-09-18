@@ -5,17 +5,19 @@ function Info1() {
   return (
     <>
     <main className='infoOne'>
-         <div className="logo-section">
+         {/* <div className="logo-section">
           <img src={Logo} alt="Logo" className='logo' />
-          <h2 className='sub fw-bolder'>ALAIGBO Youth Forum</h2>
-          <p className='fw-bold fs-4'>PRESENTS</p>
-        </div>
+          <div className='logo-content'>
+          <h2 className='sub fw-bolder'>ALAIGBO Youth Forum <span>PRESENTS</span></h2>
+          </div>
+        </div> */}
           <div className="mainTxt">
-            <p className='fw-bold'>Alaigbo Youth Summit</p>
-            <img src="line.png" alt="" className='line'/>
-            <span className='fw-bold subtxt'>
+          <img src={Logo} alt="Logo" className='logo' />
+            <p>Alaigbo Youth <span>Summit</span></p>
+            <span>
               Redefining the Economic and Political Landscape of South Eastern Nigeria 
             </span>
+            <img src="line.png" alt="" className='line'/>
           </div>
     </main>
     </>
