@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import "slick-carousel/slick/slick.css";
+import Slide from './Slide';
 
 export default function Home() {
   return (

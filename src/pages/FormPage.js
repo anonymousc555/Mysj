@@ -98,6 +98,18 @@ function FormPage() {
     const stateOfOrigin = useRef();
     const lgaRef = useRef();
     const businessInterestRef = useRef();
+
+    // useEffect(() => {
+    //   const stateOfOriginValue = stateOfOrigin.current;
+    //   const lgaRefValue = lgaRef.current;
+
+    //   stateOfOriginValue.addEventListener("input", () => {
+    //     console.log(stateOfOriginValue.value)
+    //   })
+    //   lgaRefValue.addEventListener("input", () => {
+    //     console.log(lgaRefValue.value)
+    //   })
+    // }, [])
   
     useEffect(() => {
       const ticketValue = ticketType.current;
@@ -231,7 +243,7 @@ function FormPage() {
             ref={email}
            />
 
-          <select value={state} ref={stateOfOrigin} name="state_of_origin" onChange={(e) => setState(e.target.value)}>
+          <select ref={stateOfOrigin} name="state_of_origin" onChange={(e) => setState(e.target.value)}>
             <option
               value="State of origin"
               style={{ display: state !== null && 'none' }}
@@ -242,7 +254,7 @@ function FormPage() {
               <option value={state.state.name}>{state.state.name}</option>
             ))}
           </select>
-          <select value={lga} ref={lgaRef} name="lga" onChange={(e) => setLga(e.target.value)}>
+          <select ref={lgaRef} name="lga" onChange={(e) => setLga(e.target.value)}>
             <option value={null}>LGA</option>
             {lgas.map((lga) => (
               <option value={lga}>{lga}</option>
