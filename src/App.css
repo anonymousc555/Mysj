@@ -447,3 +447,41 @@ header ul li .nav-link{
 .makePay a{
   color: #fff;
 }
+.infoOne,
+.logo-section,
+.mainTxt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infoOne .logo{
+  align-self: center;
+  width: 300px;
+}
+.infoOne .sub{
+  text-transform: uppercase;
+}
+.mainTxt p{
+  font-family: 'Noto Serif', serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  width: 50rem;
+  text-align: center;
+  color: #ec8e37ff;
+  line-height: 75px;
+}
+.mainTxt .subtxt{
+  width: 49rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 968px){
+  .mainTxt p{
+    font-size: 2.5rem;
+    width: 30rem;
+  }
+  .mainTxt .subtxt{
+    font-size: 1.7rem;
+    width: 30rem;
+  }
+}
