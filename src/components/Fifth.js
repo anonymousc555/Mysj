@@ -5,9 +5,9 @@ AOS.init();
 function infoFive() {
   return (
     <>
-        <main className='infoFive' data-aos="fade-up">
-          <div className="mainFifth">
-            <h3 className='fw-bold mt-3 text-center'>Alaigbo Youth Forum (AYF)</h3>
+        <main className='info-five' data-aos="fade-up">
+          <div className="main-fifth">
+            <h3>Alaigbo Youth Forum (AYF)</h3>
             <p>
             is a nonprofit organization
             dedicated to reshaping the
@@ -16,36 +16,36 @@ function infoFive() {
             Nigeria.
             </p>
           </div>
-          <div className="subTxt"  data-aos="fade-up">
-            <h1>
+          <div className="sub-txt"  data-aos="fade-up">
+            <h3>
             OUR GUIDING
             PRINCIPLES:
-            </h1>
-            <div className="principles">
+            </h3>
+            <div className="principle">
            <ul>
             <li>
-            ALAIGBO-FIRST
+            ALAIGBO-First
             </li>
             <li>
-            HARDWORK
+            Hardwork
             </li>
             <li>
-            INNOVATION
+            Innovation
             </li>
             <li>
-            COURAGE
+            Courage
             </li>
             <li>
-            UNITY OF PURPOSE
+            Unity of purpose
             </li>
             <li>
-            RESPECT
+            Respect
             </li>
             <li>
-            SOLUTION-ORIENTED
+            Solution-Oriented
             </li>
             <li>
-            FOCUS
+            Focus
             </li>
            </ul>
             </div>

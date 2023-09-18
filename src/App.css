@@ -348,8 +348,9 @@ header ul li .nav-link{
     margin: 0 auto;
   }
   .info2 h1{
-    margin-top: 50px;
+    margin-top: 60px;
     font-weight: 600;
+    font-size: 27px;
   }
   .info2 ul{
     padding-left: 0;
@@ -391,6 +392,65 @@ header ul li .nav-link{
   }
   .infothree .strategy{
     position: relative;
+  }
+  .info-five{
+    width: 70%;
+    margin: 90px auto;
+    text-align: center;
+  }
+  .info-five .main-fifth h3{
+    font-weight: 600;
+  }
+  .info-five .main-fifth p{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+  }
+  .info-five .sub-txt h3{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .info-five .sub-txt .principle ul{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .info-five .sub-txt .principle ul li{
+    list-style: none;
+    font-size: 14px;
+    background-color: rgba(153, 150, 150, 0.886);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+  }
+  .sixth .sub-txt-sixth p{
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    font-size: 14px;
+  }
+  .sixth h1{
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .last-section{
+    text-align: center;
+    margin: 100px 0;
+  }
+  .last-section h1{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .last-section .venue-txt{
+    margin-top: 40px;
+  }
+  .last-section .venue-txt p{
+    font-size: 14px;
+  }
+  .last-section .venue-txt .time{
+    font-weight: bold;
   }
 }
 

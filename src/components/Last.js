@@ -4,13 +4,13 @@ import Logo from '../logo.png'
 function Last() {
   return (
     <>
-    <main className='last'>
-          <img src={Logo} alt="Logo" className='logo mt-5' />
-          <h1 className='mt-5'>
+    <main className='last-section'>
+          {/* <img src={Logo} alt="Logo" className='logo mt-5' /> */}
+          <h1>
           ALAIGBO
           YOUTH SUMMIT
           </h1>
-          <div className="venue">
+          <div className="venue-txt">
             <p className='loc'>
             THE AHIAJOKU CENTRE,
             OWERRI, IMO STATE
