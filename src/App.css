@@ -456,7 +456,9 @@ header ul li .nav-link{
 .vision,
 .infoFour,
 .infoFive,
-.mainFifth{
+.mainFifth,
+.sixth,
+.subTxtSixth{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -604,5 +606,46 @@ header ul li .nav-link{
     margin-left: -2rem;
     font-size: 1rem;
     line-height: 30px;
+  }
+}
+.sixth{
+  margin-top: 5rem;
+}
+.sixth h1{
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.sixth .subTxtSixth{
+  width: 45rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 800px) {
+  .sixth h1{
+    font-size: 1.3rem;
+  }
+  .sixth .subTxtSixth{
+    width: 35rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sixth .subTxtSixth{
+    width: 25rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sixth .subTxtSixth{
+    width: 20rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
   }
 }

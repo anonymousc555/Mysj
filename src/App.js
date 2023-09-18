@@ -7,6 +7,7 @@ import InfoSec from './components/InfoSec'
 import InfoThree from './components/InfoThree'
 import InfoFour from './components/InfoFour'
 import Fifth from './components/Fifth'
+import Next from './components/Sixth'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <InfoThree />
       <InfoFour />
       <Fifth />
+      <Next />
       <Footer />
     </>
   )
