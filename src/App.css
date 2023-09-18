@@ -449,7 +449,8 @@ header ul li .nav-link{
 }
 .infoOne,
 .logo-section,
-.mainTxt{
+.mainTxt,
+.info2{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -484,4 +485,13 @@ header ul li .nav-link{
     font-size: 1.7rem;
     width: 30rem;
   }
+}
+.info2{
+  margin-top: 3rem;
+}
+.info2 .objT{
+  text-decoration: underline;
+}
+.info2 ul li{
+  text-align: center;
 }
