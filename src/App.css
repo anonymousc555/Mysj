@@ -450,14 +450,23 @@ header ul li .nav-link{
 .infoOne,
 .logo-section,
 .mainTxt,
-.info2{
+.info2,
+.infothree,
+.mission,
+.vision,
+.infoFour{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.infoOne .logo{
+.infoOne .logo,
+.infothree .logo{
   align-self: center;
   width: 300px;
+}
+.infothree .sub{
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 .infoOne .sub{
   text-transform: uppercase;
@@ -494,4 +503,42 @@ header ul li .nav-link{
 }
 .info2 ul li{
   text-align: center;
+}
+
+.mission,
+.vision{
+  margin-top: 5rem;
+}
+.mission h4,
+.vision h4{
+  font-weight: 600;
+  font-size: 3rem;
+}
+.mission p,
+.vision p{
+  text-align: center;
+  font-size: 1.3rem;
+  width: 25rem;
+}
+.infoFour h1{
+  font-family: 'Noto Serif', serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.infoFour span{
+  width: 40rem;
+  font-weight: 500;
+  text-align: center;
+  font-size: 2rem;
+}
+@media screen and (max-width: 760px) {
+  .infoFour span{
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .infoFour span{
+    font-size: 1.5rem;
+    width: 25rem;
+  }
 }
