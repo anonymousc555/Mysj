@@ -1,13 +1,11 @@
 import React from 'react'
-import Logo from '../logo.png'
 
 function infoFive() {
   return (
     <>
-        <main className='infoFive mt-5'>
-          <img src={Logo} alt="Logo" className='logo' />
+        <main className='infoFive'>
           <div className="mainFifth">
-            <h3 className='fw-bold mt-3'>Alaigbo Youth Forum (AYF)</h3>
+            <h3 className='fw-bold mt-3 text-center'>Alaigbo Youth Forum (AYF)</h3>
             <p>
             is a nonprofit organization
             dedicated to reshaping the
@@ -16,7 +14,6 @@ function infoFive() {
             Nigeria.
             </p>
           </div>
-          <img src="line2.png" alt="" className='line2'/>
           <div className="subTxt">
             <h1>
             OUR GUIDING

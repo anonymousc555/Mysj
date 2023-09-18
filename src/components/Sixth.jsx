@@ -7,7 +7,7 @@ function Next() {
         <h1>
         GOAL OF ALAIGBO YOUTH SUMMIT
         </h1>
-        <img src="svg.png" alt="" className='my-3'/>
+        <img src="svg.png" alt="" className='my-3 svg'/>
         <div className="subTxtSixth">
         The goal of AYF Summit is to change the
       political, Business and legal contexts in

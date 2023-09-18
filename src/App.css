@@ -455,8 +455,6 @@ header ul li .nav-link{
 .mission,
 .vision,
 .infoFour,
-.infoFive,
-.mainFifth,
 .sixth,
 .subTxtSixth,
 .last{
@@ -513,7 +511,7 @@ header ul li .nav-link{
 
 .mission,
 .vision{
-  margin-top: 5rem;
+  margin-top: 12rem;
 }
 .mission h4,
 .vision h4{
@@ -526,20 +524,48 @@ header ul li .nav-link{
   font-size: 1.3rem;
   width: 25rem;
 }
+
+.aboutUs{
+  display: flex;
+  width: 60%;
+  margin-top: 7rem;
+  margin-left: 7rem;
+  justify-content: space-between;
+  align-items:flex-start;
+}
+/* .logo-section{
+  height: 100vh;
+} */
+/* .others{
+  overflow: scroll;
+  height: 50vh;
+} */
+.aboutUs .logo-section {
+  position: sticky;
+  top: 0;
+}
 .infoFour h1{
-  font-family: 'Noto Serif', serif;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  
 }
 .infoFour span{
-  width: 40rem;
-  font-weight: 500;
+  width: 31rem;
+  font-weight: 600;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 @media screen and (max-width: 760px) {
   .infoFour span{
     width: 30rem;
+  }
+  .aboutUs .logo-section {
+    position: relative;
+    top: 0;
+  }
+  .aboutUs{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
   }
 }
 @media screen and (max-width: 600px) {
@@ -547,6 +573,20 @@ header ul li .nav-link{
     font-size: 1.5rem;
     width: 25rem;
   }
+}
+
+.infoFive{
+  display: flex;
+  margin-left: 5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 7rem;
+}
+.subTxt{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .mainFifth p{
   font-weight: 500;
@@ -566,11 +606,12 @@ header ul li .nav-link{
 }
 .subTxt h1{
   text-align: center;
+  font-size: 23px;
 }
 .principles ul li{
   list-style-type: none;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 16px;
   font-weight: 600;
   margin-left: -2rem;
     line-height: 50px;
@@ -611,17 +652,24 @@ header ul li .nav-link{
 }
 .sixth{
   margin-top: 5rem;
+  align-items: flex-end;
+  margin-right: 3rem;
 }
 .sixth h1{
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+  font-size: 25px;
+}
+.sixth .svg{
+  width: 500px;
 }
 .sixth .subTxtSixth{
-  width: 45rem;
+  width: 25rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 18px;
   font-weight: 600;
+  margin-right: 3rem;
 }
 @media screen and (max-width: 800px) {
   .sixth h1{
