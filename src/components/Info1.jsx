@@ -12,7 +12,7 @@ function Info1() {
         </div>
           <div className="mainTxt">
             <p className='fw-bold'>Alaigbo Youth Summit</p>
-            <img src="line.png" alt="" />
+            <img src="line.png" alt="" className='line'/>
             <span className='fw-bold subtxt'>
               Redefining the Economic and Political Landscape of South Eastern Nigeria 
             </span>

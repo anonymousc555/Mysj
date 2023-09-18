@@ -454,13 +454,16 @@ header ul li .nav-link{
 .infothree,
 .mission,
 .vision,
-.infoFour{
+.infoFour,
+.infoFive,
+.mainFifth{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .infoOne .logo,
-.infothree .logo{
+.infothree .logo,
+.infoFive .logo{
   align-self: center;
   width: 300px;
 }
@@ -540,5 +543,66 @@ header ul li .nav-link{
   .infoFour span{
     font-size: 1.5rem;
     width: 25rem;
+  }
+}
+.mainFifth p{
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 30rem;
+}
+@media screen and (max-width: 760px) {
+  .mainFifth p{
+    font-size: 1.3rem;
+    width: 25rem;
+  }
+}
+.line2,
+.subTxt{
+  margin-top: 7rem;
+}
+.subTxt h1{
+  text-align: center;
+}
+.principles ul li{
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: -2rem;
+    line-height: 50px;
+}
+@media screen and (max-width: 500px) {
+  .line{
+    width: 300px;
+  }
+  .mainTxt .subtxt{
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+  .mission p{
+    width: 23rem;
+  }
+  .vision p{
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+  .idea{
+    width: 350px;
+  }
+  .infoFour span{
+    font-size: 1.3rem;
+    width: 300px;
+  }
+  .mainFifth p{
+    width: 300px;
+  }
+   .subTxt h1{
+    font-size: 20px;
+  }
+  .principles ul li{
+    margin-left: -2rem;
+    font-size: 1rem;
+    line-height: 30px;
   }
 }

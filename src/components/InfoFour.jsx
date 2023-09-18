@@ -4,7 +4,7 @@ function InfoFour() {
   return (
     <>
         <main className='infoFour mt-5'>
-        <img src="idea.png" alt="" />
+        <img src="idea.png" alt="" className='idea'/>
         <h1 className='mt-3 fw-bold'>Our Strategy</h1>
         <span className='mt-2'>
         Harnessing the energy of the
