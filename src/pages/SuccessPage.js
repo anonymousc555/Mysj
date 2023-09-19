@@ -36,7 +36,7 @@ fetch(`https://payment.flashticketpro.com/get_user/${id}`)
 .catch((error) => {
 					
 				// Error handling
-				Alert ("dear user you have not paid please proceed to the payment page, jahkamso u can use react bootstrap to this, like a modal or so")
+				alert ("dear user you have not paid please proceed to the payment page, jahkamso u can use react bootstrap to this, like a modal or so")
 setShow(false)
 				});
 		}
