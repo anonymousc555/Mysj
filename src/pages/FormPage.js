@@ -281,7 +281,7 @@ function FormPage() {
         <Modal.Header closeButton>
           <Modal.Title>Error!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>We encountered an error while sending your input. If issue persists, please contact abc@gmail.com</Modal.Body>
+        <Modal.Body>We encountered an error while sending your input. If issue persists, please contact <a href="mailto:flashticketpro@gmail.com">flashticketpro@gmail.com</a></Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
