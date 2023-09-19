@@ -292,7 +292,7 @@ function FormPage() {
         <Modal.Header closeButton>
           <Modal.Title>Success</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Your Profile has been succesfully created! Kindly click the make payment button below to buy your ticket. <br /> Dear Users, please do not leave the payment until payment is complete, you will be automatically redirected to success page. Please click on make payment button</Modal.Body>
+        <Modal.Body>Your Profile has been succesfully created! Kindly click the make payment button below to buy your ticket. <br /> Dear Users, please do not leave the payment page, you will be automatically redirected once your payment is completed.<br /> Please click on make payment button to proceed</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseSuc}>
             Close
