@@ -5,7 +5,7 @@ function Footer() {
       <div className="footer-content">
           <p>summit@alaigboyouthforum.org</p>
           <p>+2348160734109</p>
-          <p>Powered By Flash Ticket Pro</p>
+          <p>Powered By Flash Ticket Pro <br />©Trademark of Intellisense Technology LTD</p>
       </div>
     </div>
   );
