@@ -42,7 +42,7 @@ setShow(false)
 		}
 
 
-  }, [id]);
+  , [id]);
   return (
       <>
           <Header />
