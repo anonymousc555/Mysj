@@ -207,9 +207,9 @@ function FormPage() {
     }));
 
     setisLoading(true);
-    setaCont(`https://tixpro.onrender.com/initialize/${newItem.unique_id}`);
+    setaCont(`https://payment.flashticketpro.com/initialize/${newItem.unique_id}`);
 
-    fetch('https://tixpro.onrender.com/add_user', {
+    fetch('https://payment.flashticketpro.com/add_user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -305,7 +305,7 @@ function FormPage() {
         <Modal.Header closeButton>
           <Modal.Title>Error!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>We encountered an error while sending your input. If issue persists, please contact abc@gmail.com</Modal.Body>
+        <Modal.Body>We encountered an error while sending your input. If issue persists, please contact <a href="mailto:flashticketpro@gmail.com">flashticketpro@gmail.com</a></Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
@@ -316,7 +316,7 @@ function FormPage() {
         <Modal.Header closeButton>
           <Modal.Title>Success</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Your Profile has been succesfully created! Kindly click the make payment button below to buy your ticket. <br /> Dear Users, please do not leave the payments page for no reason until you have seen the success page thank you</Modal.Body>
+        <Modal.Body>Your Profile has been succesfully created! Kindly click the make payment button below to buy your ticket. <br /> Dear Users, please do not leave the payment page, you will be automatically redirected once your payment is completed.<br /> Please click on make payment button to proceed</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseSuc}>
             Close
