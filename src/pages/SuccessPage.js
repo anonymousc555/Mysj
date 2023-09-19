@@ -49,8 +49,10 @@ setShow(false)
       <div className='success-page'>
      <p> </p>
 {show &&
+	<>
         <h1>You have successfully purchased your Ticket.🥳🎉</h1>
 	<h1> An email will be sent you containing your Ticket details</h1>           <button><Link className='success-btn' to='/'>Dismiss</Link></button>
+	</>
 }
       </div>
     </>
