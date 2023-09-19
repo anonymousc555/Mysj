@@ -14,7 +14,7 @@ const [show, setShow] = useState(false)
 let content = '';
     console.log(id);
 
-fetch(`https://tixpro.onrender.com/get_user/${id}`)
+fetch(`https://payment.flashticketpro.com/get_user/${id}`)
 				.then((response) => response.json())
 				.then((data) => {
 					const excludedFields = ['id'];
