@@ -191,9 +191,9 @@ function FormPage() {
     }));
 
     setisLoading(true);
-    setaCont(`https://tixpro.onrender.com/initialize/${newItem.unique_id}`);
+    setaCont(`https://payment.flashticketpro.com/initialize/${newItem.unique_id}`);
 
-    fetch('https://tixpro.onrender.com/add_user', {
+    fetch('https://payment.flashticketpro.com/add_user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
