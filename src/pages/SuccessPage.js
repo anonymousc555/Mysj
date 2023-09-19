@@ -1,7 +1,15 @@
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
+ import { useLocation } from 'react-router-dom';
 
 function SuccessPage() {
+	const location = useLocation();
+  const urlParams = new URLSearchParams(location.search);
+  const id = urlParams.get('id');
+
+  useEffect(() => {
+    console.log(id);
+  }, [id]);
   return (
       <>
           <Header />
