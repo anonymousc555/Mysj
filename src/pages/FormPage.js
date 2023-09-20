@@ -4,13 +4,29 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import data1 from '../state-lgas';
 import businessInterest from '../business-interest';
-import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 function FormPage() {
+
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  // Function to handle changes in the phone number input
+  const handlePhoneNumberChange = (e) => {
+    let inputPhoneNumber = e.target.value;
+
+    // Remove any non-numeric characters (except '+')
+    inputPhoneNumber = inputPhoneNumber.replace(/[^0-9+]/g, '');
+
+    // Ensure that the '+' sign is at the beginning of the input
+    if (inputPhoneNumber.startsWith('+')) {
+      setPhoneNumber(inputPhoneNumber);
+    } else {
+      setPhoneNumber('+' + inputPhoneNumber);
+    }
+  };
 
   const [state, setState] = useState(null);
   const [showBtn, setShowBtn] = useState(true);
@@ -25,7 +41,7 @@ function FormPage() {
   const handleClose = () => setShow(false);
   const handleCloseSuc = () => setshowSuc(false);
     
-    const [phoneNumber, setPhoneNumber] = useState("");
+    // const [phoneNumber, setPhoneNumber] = useState("");
 
     function generateRandomString(length) {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -191,9 +207,9 @@ function FormPage() {
     }));
 
     setisLoading(true);
-    setaCont(`https://tixpro.onrender.com/initialize/${newItem.unique_id}`);
+    setaCont(`https://payment.flashticketpro.com/initialize/${newItem.unique_id}`);
 
-    fetch('https://tixpro.onrender.com/add_user', {
+    fetch('https://payment.flashticketpro.com/add_user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -225,7 +241,15 @@ function FormPage() {
         <form onSubmit={handleSubmit}>
           <input type="text" id="firstName" placeholder="First name" required name="first_name" ref={firstName}/>
           <input type="text" id="lastName" placeholder="Last name" required name="last_name" ref={lastName}/>
-          <PhoneInput
+          <input
+        type="text"
+        value={phoneNumber}
+        onChange={handlePhoneNumberChange}
+        placeholder="+1234567890" // You can set a placeholder with a sample country code
+        maxLength={15}
+      />
+
+          {/* <PhoneInput
             specialLabel=''
             buttonStyle={dropDownButton}
             dropdownStyle={dropDown}
@@ -234,7 +258,7 @@ function FormPage() {
             value={phoneNumber}
             onChange={(phone) => setPhoneNumber(phone)}
             name="phone_number"
-          />
+          /> */}
           <input
             type="email"
             id="email"
@@ -281,7 +305,7 @@ function FormPage() {
         <Modal.Header closeButton>
           <Modal.Title>Error!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>We encountered an error while sending your input. If issue persists, please contact abc@gmail.com</Modal.Body>
+        <Modal.Body>We encountered an error while sending your input. If issue persists, please contact <a href="mailto:flashticketpro@gmail.com">flashticketpro@gmail.com</a></Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
@@ -292,7 +316,7 @@ function FormPage() {
         <Modal.Header closeButton>
           <Modal.Title>Success</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Your Profile has been succesfully created! Kindly click the make payment button below to buy your ticket. <br /> Dear Users, please do not leave the payments page for no reason until you have seen the success page thank you</Modal.Body>
+        <Modal.Body>Your Profile has been succesfully created! Kindly click the make payment button below to buy your ticket. <br /> Dear Users, please do not leave the payment page, you will be automatically redirected once your payment is completed.<br /> Please click on make payment button to proceed</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseSuc}>
             Close
