@@ -239,14 +239,27 @@ header ul li .nav-link{
   padding: 50px 0;
   background-color: black;
   color: white;
-  gap: 25px;
+  gap: 15px;
+}
+.footer-section h4{
+  font-size: 20px;
+  font-weight: 600;
 }
 .footer-section .footer-content{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 7px;
+}
+.footer-section .footer-content p a{
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+.footer-section .footer-content .footer-powered{
+  font-size: 13px;
+  color: #676464;
 }
 
 /* ==== Success Page ==== */
