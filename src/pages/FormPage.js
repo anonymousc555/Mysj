@@ -185,7 +185,8 @@ function FormPage() {
         !emailValue.includes("@") ||
         stateOfOriginValue.length === 0 ||
         businessInterestRefValue.length === 0 ||
-        lgaRefValue.length === 0
+        lgaRefValue.length === 0 ||
+        phoneNumber.length === 0
       ) {
         alert("Input is invalid. Please check your input.")
         return;
