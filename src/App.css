@@ -557,6 +557,16 @@ header ul li .nav-link{
   text-align: center;
   font-size: 1.5rem;
 }
+.formImg{
+  width: 80vw;
+  align-self: center;
+  position: relative;
+  transform: translateX(-30%);
+  left: 0;
+  height: 50vh;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
 @media screen and (max-width: 760px) {
   .infoFour span{
     width: 30rem;

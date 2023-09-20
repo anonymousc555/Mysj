@@ -220,8 +220,8 @@ function FormPage() {
     <>
       <Header />
       <div className="form-section">
-
-        <h1>Grab Your Seat</h1>
+      <img src='ds.jpg' className='formImg'/>
+        <h1>Grab Your Ticket</h1>
         <form onSubmit={handleSubmit}>
           <input type="text" id="firstName" placeholder="First name" required name="first_name" ref={firstName}/>
           <input type="text" id="lastName" placeholder="Last name" required name="last_name" ref={lastName}/>
