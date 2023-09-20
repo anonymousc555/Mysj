@@ -501,6 +501,9 @@ header ul li .nav-link{
     justify-content: space-between;
     background-color: white;
   }
+  .summit-text h2{
+    font-size: 27px;
+  }
   #break-line::before{
     content: "";
     white-space: none;
@@ -516,6 +519,171 @@ header ul li .nav-link{
   }
   .success-page{
     width: 40%;
+  }
+  
+  
+  .sixth h1{
+    text-align: center;
+    margin: 30px;
+  }
+  .infoOne{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .infoOne .logo-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .infoOne .mainTxt .logo{
+    width: 120px;
+  }
+  .infoOne .logo-section .logo-content h2{
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .infoOne .logo-section .logo-content h2 span::before{
+    content: "\a";
+    white-space: pre;
+  }
+  .infoOne .mainTxt{
+    margin-top: 50px;
+  }
+  .infoOne .mainTxt p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  .infoOne .mainTxt p span{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .infoOne .mainTxt span{
+    text-align: center;
+    font-size: 14px;
+    width: 60%;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  .infoOne .mainTxt img{
+    width: 53%;
+  }
+  .info2{
+    width: 40%;
+    margin: 0 auto;
+  }
+  .info2 h1{
+    margin-top: 60px;
+    font-weight: 600;
+    font-size: 27px;
+  }
+  .info2 ul{
+    padding-left: 0;
+    width: 60%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .info2 ul li{
+    font-size: 13px;
+    list-style: none;
+  }
+  .infothree .about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .infothree .about-us h2{
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  .infothree .about-us .others{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    width: 60%;
+    margin: 30px auto;
+    width: 30%;
+  }
+  .infothree .about-us .others h4{
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .infothree .about-us .others div p{
+    font-size: 14px;
+  }
+  .infothree .strategy{
+    position: relative;
+  }
+  .info-five{
+    width: 40%;
+    margin: 90px auto;
+    text-align: center;
+  }
+  .info-five .sub-txt .principle ul{
+    padding: 0;
+  }
+  .info-five .main-fifth h3{
+    font-weight: 600;
+  }
+  .info-five .main-fifth p{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+  }
+  .info-five .sub-txt h3{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .info-five .sub-txt .principle ul{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .info-five .sub-txt .principle ul li{
+    list-style: none;
+    font-size: 13px;
+    background-color: rgba(153, 150, 150, 0.886);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+  }
+  .sixth .sub-txt-sixth p{
+    text-align: center;
+    margin: 20px auto;
+    width: 45%;
+    font-size: 14px;
+  }
+  .sixth h1{
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .last-section{
+    text-align: center;
+    margin: 100px 0;
+  }
+  .last-section h1{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .last-section .venue-txt{
+    margin-top: 40px;
+  }
+  .last-section .venue-txt p{
+    font-size: 14px;
+  }
+  .last-section .venue-txt .time{
+    font-weight: bold;
   }
 }
 

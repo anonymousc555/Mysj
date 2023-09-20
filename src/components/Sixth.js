@@ -6,11 +6,11 @@ function Next() {
   return (
     <>
       <main className='sixth' data-aos="fade-up">
+        {/* <img src="svg.png" alt=""/> */}
+        <div className="sub-txt-sixth">
         <h1>
         GOAL OF ALAIGBO <br /> YOUTH SUMMIT
         </h1>
-        {/* <img src="svg.png" alt=""/> */}
-        <div className="sub-txt-sixth">
           <p>
         The goal of AYF Summit is to change the
       political, Business and legal contexts in
