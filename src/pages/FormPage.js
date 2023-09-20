@@ -102,6 +102,7 @@ function FormPage() {
     const [firstNameValue, setFirstNameValue] = useState(""); 
     const [lastNameValue, setLastNameValue] = useState(""); 
     const [emailValue, setEmailValue] = useState(""); 
+    const [phoneNoValue, setPhoneNoValue] = useState(""); 
     const [stateOfOriginValue, setStateOfOriginValue] = useState(""); 
     const [lgaRefValue, setLgaRefValue] = useState(""); 
     const [businessInterestRefValue, setBusinessInterestRefValue] = useState(""); 
@@ -112,6 +113,7 @@ function FormPage() {
     const firstName = useRef();
     const lastName = useRef();
     const email = useRef();
+    const phoneNo = useRef();
     const stateOfOrigin = useRef();
     const lgaRef = useRef();
     const businessInterestRef = useRef();
@@ -130,6 +132,7 @@ function FormPage() {
   
     useEffect(() => {
       const ticketValue = ticketType.current;
+      const phoneNoValue = phoneNo.current;
       const firstNameValue = firstName.current;
       const lastNameValue = lastName.current;
       const emailValue = email.current;
@@ -142,14 +145,16 @@ function FormPage() {
       };
   
       ticketValue.addEventListener('input', (event) => handleInput(event, setTicketTypeValue));
+      phoneNoValue.addEventListener('input', (event) => handleInput(event, setPhoneNoValue));
       firstNameValue.addEventListener('input', (event) => handleInput(event, setFirstNameValue));
       lastNameValue.addEventListener('input', (event) => handleInput(event, setLastNameValue));
       emailValue.addEventListener('input', (event) => handleInput(event, setEmailValue));
       stateOfOriginValue.addEventListener('input', (event) => handleInput(event, setStateOfOriginValue));
       lgaRefValue.addEventListener('input', (event) => handleInput(event, setLgaRefValue));
       businessInterestRefValue.addEventListener('input', (event) => handleInput(event, setBusinessInterestRefValue));
-  
+      
       return () => {
+        phoneNoValue.removeEventListener('input', (event) => handleInput(event, setPhoneNoValue));
         ticketValue.removeEventListener('input', (event) => handleInput(event, setTicketTypeValue));
         firstNameValue.removeEventListener('input', (event) => handleInput(event, setFirstNameValue));
         lastNameValue.removeEventListener('input', (event) => handleInput(event, setLastNameValue));
@@ -180,7 +185,8 @@ function FormPage() {
         !emailValue.includes("@") ||
         stateOfOriginValue.length === 0 ||
         businessInterestRefValue.length === 0 ||
-        lgaRefValue.length === 0
+        lgaRefValue.length === 0 ||
+        phoneNoValue.length < 14
       ) {
         alert("Input is invalid. Please check your input.")
         return;
@@ -191,7 +197,7 @@ function FormPage() {
       "unique_id": randomString,
       "first_name": firstNameValue,
       "last_name": lastNameValue,
-      "phone_number": "blank",
+      "phone_number": phoneNoValue,
       "email": emailValue,
       "state_of_origin": stateOfOriginValue,
       "lga": lgaRefValue,
@@ -236,7 +242,7 @@ function FormPage() {
     <>
       <Header />
       <div className="form-section">
-      <img src='ds.jpg' className='formImg'/>
+      {/* <img src='ds.jpg' className='formImg'/> */}
         <h1>Grab Your Ticket</h1>
         <form onSubmit={handleSubmit}>
           <input type="text" id="firstName" placeholder="First name" required name="first_name" ref={firstName}/>
@@ -247,6 +253,8 @@ function FormPage() {
         onChange={handlePhoneNumberChange}
         placeholder="+1234567890" // You can set a placeholder with a sample country code
         maxLength={15}
+        name="phone_number"
+        ref={phoneNo}
       />
 
           {/* <PhoneInput
@@ -257,7 +265,6 @@ function FormPage() {
             country={'ng'}
             value={phoneNumber}
             onChange={(phone) => setPhoneNumber(phone)}
-            name="phone_number"
           /> */}
           <input
             type="email"

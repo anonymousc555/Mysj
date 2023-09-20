@@ -70,7 +70,7 @@ fetch(`https://payment.flashticketpro.com/get_user/${id}`)
 <>
 <div className="error-page">
   <h1>Dear User you have not paid for this ticket please proceed to the buy your ticket page to get yourself a ticket or contact <a href="mailto:flashticketpro@gmail.com">flashticketpro@gmail.com</a></h1>
-<Link className='success-btn' to='/'>Dismiss</Link>
+<Link className='success-btn' to='/form'>Proceed to Payment Page</Link>
 </div>
 </>
 }
