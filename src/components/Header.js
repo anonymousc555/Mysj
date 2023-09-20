@@ -14,11 +14,13 @@ export default function Header() {
   return (
     <>
       <header>
+        <Link to="/" className='logo'>
               <div className="logo-section">
                 <Link to="/"><img src={Logo} alt="Logo" className='logo' /></Link>
                 <Link style={style} to="/"><h3>ALAIGBO <br /> Youth Summit</h3></Link>
       
       </div>
+        </Link>
 <div className="menu">
   <ul style={{ display: !showNav && 'flex' }}>
     <li>

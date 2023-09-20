@@ -263,7 +263,8 @@ header ul li .nav-link{
 }
 
 /* ==== Success Page ==== */
-.success-page{
+.success-page,
+.error-page{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -271,17 +272,21 @@ header ul li .nav-link{
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 70%;
+  width: 80%;
   text-align: center;
 }
-.success-page button{
+.success-page button,
+.error-page button,
+.success-page button a,
+.error-page button a{
   border: none;
   outline: none;
   border-radius: 5px;
   padding: 20px 0;
   background-color: rgb(47, 47, 47);
 }
-.success-page button .success-btn{
+.success-page button .success-btn,
+.error-page button .success-btn{
   color: white;
   text-decoration: none;
   font-size: 16px;
@@ -517,7 +522,8 @@ header ul li .nav-link{
   .form-section{
     width: 70%;
   }
-  .success-page{
+  .success-page,
+  .error-page{
     width: 40%;
   }
   
@@ -713,7 +719,8 @@ header ul li .nav-link{
   .form-section{
     width: 50%;
   }
-  .success-page{
+  .success-page,
+  .error-page{
     width: 30%;
   }
 }
@@ -722,8 +729,9 @@ header ul li .nav-link{
   .hero-container{
     height: 100vh;
   }
-  .success-page{
-    width: 20%;
+  .success-page,
+  .error-page{
+    width: 80%;
   }
 }
 .loading{
@@ -919,6 +927,16 @@ header ul li .nav-link{
   font-weight: 600;
   text-align: center;
   font-size: 1.5rem;
+}
+.formImg{
+  width: 80vw;
+  align-self: center;
+  position: relative;
+  transform: translateX(-30%);
+  left: 0;
+  height: 50vh;
+  padding: 2rem;
+  margin-bottom: 3rem;
 }
 @media screen and (max-width: 760px) {
   .infoFour span{
