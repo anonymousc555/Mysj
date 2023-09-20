@@ -243,6 +243,7 @@ function FormPage() {
       <div className="form-section">
       {/* <img src='ds.jpg' className='formImg'/> */}
         <h1>Grab Your Ticket</h1>
+        <img src='/summit-form-img.jpg' alt='summit form image' className='form-header-img' />
         <form onSubmit={handleSubmit}>
           <input type="text" id="firstName" placeholder="First name" required name="first_name" ref={firstName}/>
           <input type="text" id="lastName" placeholder="Last name" required name="last_name" ref={lastName}/>
@@ -252,7 +253,7 @@ function FormPage() {
         onChange={handlePhoneNumberChange}
         placeholder="+1234567890" // You can set a placeholder with a sample country code
         maxLength={15}
-        // name="phone_number"
+        name="phone_number"
         // ref={phoneNo}
       />
 
