@@ -11,22 +11,22 @@ import Button from 'react-bootstrap/Button';
 
 function FormPage() {
 
-  // const [phoneNumber, setPhoneNumber] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
 
   // Function to handle changes in the phone number input
-  // const handlePhoneNumberChange = (e) => {
-  //   let inputPhoneNumber = e.target.value;
+  const handlePhoneNumberChange = (e) => {
+    let inputPhoneNumber = e.target.value;
 
   //   // Remove any non-numeric characters (except '+')
-  //   inputPhoneNumber = inputPhoneNumber.replace(/[^0-9+]/g, '');
+    inputPhoneNumber = inputPhoneNumber.replace(/[^0-9+]/g, '');
 
   //   // Ensure that the '+' sign is at the beginning of the input
-  //   if (inputPhoneNumber.startsWith('+')) {
-  //     setPhoneNumber(inputPhoneNumber);
-  //   } else {
-  //     setPhoneNumber('+' + inputPhoneNumber);
-  //   }
-  // };
+    if (inputPhoneNumber.startsWith('+')) {
+      setPhoneNumber(inputPhoneNumber);
+    } else {
+      setPhoneNumber('+' + inputPhoneNumber);
+    }
+  };
 
   const [state, setState] = useState(null);
   const [showBtn, setShowBtn] = useState(true);
@@ -248,8 +248,8 @@ function FormPage() {
           <input type="text" id="lastName" placeholder="Last name" required name="last_name" ref={lastName}/>
           <input
         type="text"
-        // value={phoneNumber}
-        // onChange={handlePhoneNumberChange}
+        value={phoneNumber}
+        onChange={handlePhoneNumberChange}
         placeholder="+1234567890" // You can set a placeholder with a sample country code
         maxLength={15}
         // name="phone_number"
