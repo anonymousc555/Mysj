@@ -9,12 +9,15 @@ export default function Header() {
     setShowNav(!showNav);
   };
 
+  const style = {textDecoration: "none", color: "#333"}
+
   return (
     <>
       <header>
               <div className="logo-section">
-       <img src={Logo} alt="Logo" className='logo' />
-      <h3>ALAIGBO <br /> Youth Summit</h3>
+                <Link to="/"><img src={Logo} alt="Logo" className='logo' /></Link>
+                <Link style={style} to="/"><h3>ALAIGBO <br /> Youth Summit</h3></Link>
+      
       </div>
 <div className="menu">
   <ul style={{ display: !showNav && 'flex' }}>
