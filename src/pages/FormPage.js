@@ -23,7 +23,7 @@ function FormPage() {
     setPhoneNumber(inputPhoneNumber)
 
   //   // Ensure that the '+' sign is at the beginning of the input
-<<<<<<< HEAD
+
     // if (inputPhoneNumber.startsWith('+')) {
     //   setPhoneNumber(inputPhoneNumber);
     // } else {
@@ -31,18 +31,11 @@ function FormPage() {
     // }
   };
 
-  const [isAYFMember, setIsAYFMember] = useState(false);
+  // const [isAYFMember, setIsAYFMember] = useState(false);
 
   const handleSelectChange = (event) => {
     const selectedValue = event.target.value;
     setSelectedOption(selectedValue);
-=======
-    if (inputPhoneNumber.startsWith('+')) {
-      setPhoneNumber(inputPhoneNumber);
-    } else {
-      setIsAYFMember(false);
-    }
->>>>>>> e323658445071a9b99da81cdebba813f1032b592
   };
 
   const handle_members_id = (e) => {
@@ -52,15 +45,15 @@ function FormPage() {
     setAYFId(inputValue);
   }
 
-  const handleSelectChange = (event) => {
-    const selectedValue = event.target.value;
-    if (selectedValue === "AYF Member") {
-      setIsAYFMember(true)
-    }
-    else{
-      setIsAYFMember(false)
-    }
-  }
+  // const handleSelectChange = (event) => {
+  //   const selectedValue = event.target.value;
+  //   if (selectedValue === "AYF Member") {
+  //     setIsAYFMember(true)
+  //   }
+  //   else{
+  //     setIsAYFMember(false)
+  //   }
+  // }
 
   
 
@@ -326,6 +319,7 @@ function FormPage() {
         placeholder="+1234567890" // You can set a placeholder with a sample country code
         maxLength={15}
         name="phone_number"
+        required
         // ref={phoneNo}
       />
 
