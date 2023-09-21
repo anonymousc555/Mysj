@@ -218,7 +218,7 @@ function FormPage() {
       // Check if the selected option is "AYF Member"
     if (selectedOption === "AYF Member") {
       // Check if the input value is equal to the expected value
-      if (AYFid === "AYF-6509CEF968A3D4E35515A5D0") {
+      if (AYFid === "AYF/AN/7877356284KG") {
         // Check if the first 3 characters are "AYF"
         if (AYFid.slice(0, 3) !== "AYF") {
           setErrorMessage(alert("Membership ID must start with 'AYF'"));
@@ -367,7 +367,7 @@ function FormPage() {
           </select>
 
           {selectedOption === "AYF Member" && (
-            <input type='text' value={AYFid} placeholder='AYF Membership ID' onChange={handle_members_id} maxLength="28" required></input>
+            <input type='text' value={AYFid} placeholder='AYF Membership ID' onChange={handle_members_id} maxLength="19" required></input>
           )}
 
           {/* <select name="business_interest" ref={businessInterestRef}>
