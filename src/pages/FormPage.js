@@ -33,16 +33,14 @@ function FormPage() {
 
   const handleSelectChange = (event) => {
     const selectedValue = event.target.value;
-    if (selectedValue === "AYF Member") {
-      setIsAYFMember(true);
-    } else {
-      setIsAYFMember(false);
-    }
+    setSelectedOption(selectedValue);
   };
 
   const handle_members_id = (e) => {
-    const id = e.target.value;
-    setAYFId(id)
+    const inputValue = e.target.value;
+
+    // Update the state with the input value
+    setAYFId(inputValue);
   }
 
   
@@ -125,6 +123,8 @@ function FormPage() {
     const [stateOfOriginValue, setStateOfOriginValue] = useState(""); 
     const [lgaRefValue, setLgaRefValue] = useState("");
     const [AYFid, setAYFId] = useState("")
+    const [selectedOption, setSelectedOption] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
     // const [businessInterestRefValue, setBusinessInterestRefValue] = useState(""); 
 
     // input refs
@@ -200,13 +200,37 @@ function FormPage() {
         return false;
       }
 
-      // if(AYFid !== "AYF-6509CEF968A3D4E35515A5D0" && AYFid.slice(0, 3) !== "AYF"){
-      //   alert("Invalid AYF Membership ID")
-      //   return false
-      // }
-      
-      // if(AYFid.slice(0, 3) !== "AYF") {
-      //   alert("Membership ID must start with 'AYF'");
+      if (errorMessage) {
+        // Submit the form or perform other actions
+        alert("Form submission failed due to errors.");
+      }
+
+      // Check if the selected option is "AYF Member"
+    if (selectedOption === "AYF Member") {
+      // Check if the input value is equal to the expected value
+      if (AYFid === "AYF-6509CEF968A3D4E35515A5D0") {
+        // Check if the first 3 characters are "AYF"
+        if (AYFid.slice(0, 3) !== "AYF") {
+          setErrorMessage(alert("Membership ID must start with 'AYF'"));
+        }
+      } else {
+        setErrorMessage(alert("Membership ID must start with 'AYF'"));
+        return false;
+      }
+    }
+
+      // if (selectedOption === "AYF Member") {
+      //   // Check if the input value is equal to the expected value
+      //   if (inputValue === "AYF-6509CEF968A3D4E35515A5D0") {
+      //     // Check if the first 3 characters are "AYF"
+      //     if (inputValue.slice(0, 3) !== "AYF") {
+      //       setErrorMessage(alert("Membership ID must start with 'AYF'"));
+      //     }
+      //   } else {
+      //     setErrorMessage(alert("Invalid AYF Membership ID"));
+      //   }
+      // } else {
+      //   setErrorMessage("");
       // }
 
       if (
@@ -334,7 +358,7 @@ function FormPage() {
             <option value="AYF Member">AYF Member - N7K</option>
           </select>
 
-          {isAYFMember && (
+          {selectedOption === "AYF Member" && (
             <input type='text' value={AYFid} placeholder='AYF Membership ID' onChange={handle_members_id} maxLength="28" required></input>
           )}
 
