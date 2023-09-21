@@ -149,9 +149,6 @@ function FormPage() {
     //     console.log(lgaRefValue.value)
     //   })
     // }, [])
-
-    const AYF_length = "AYF-6509CEF968A3D4E35515A5D0";
-    console.log(AYF_length.length)
   
     useEffect(() => {
       const ticketValue = ticketType.current;
