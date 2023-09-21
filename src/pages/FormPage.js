@@ -200,10 +200,10 @@ function FormPage() {
         return false;
       }
 
-      if(AYFid !== "AYF-6509CEF968A3D4E35515A5D0" && AYFid.slice(0, 3) !== "AYF"){
-        alert("Invalid AYF Membership ID")
-        return false
-      }
+      // if(AYFid !== "AYF-6509CEF968A3D4E35515A5D0" && AYFid.slice(0, 3) !== "AYF"){
+      //   alert("Invalid AYF Membership ID")
+      //   return false
+      // }
       
       // if(AYFid.slice(0, 3) !== "AYF") {
       //   alert("Membership ID must start with 'AYF'");
