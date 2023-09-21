@@ -40,6 +40,11 @@ function FormPage() {
     }
   };
 
+  const handle_members_id = (e) => {
+    const id = e.target.value;
+    setAYFId(id)
+  }
+
   
 
   const [state, setState] = useState(null);
@@ -119,6 +124,7 @@ function FormPage() {
     // const [phoneNoValue, setPhoneNoValue] = useState("");
     const [stateOfOriginValue, setStateOfOriginValue] = useState(""); 
     const [lgaRefValue, setLgaRefValue] = useState("");
+    const [AYFid, setAYFId] = useState("")
     // const [businessInterestRefValue, setBusinessInterestRefValue] = useState(""); 
 
     // input refs
@@ -143,6 +149,9 @@ function FormPage() {
     //     console.log(lgaRefValue.value)
     //   })
     // }, [])
+
+    const AYF_length = "AYF-6509CEF968A3D4E35515A5D0";
+    console.log(AYF_length.length)
   
     useEffect(() => {
       const ticketValue = ticketType.current;
@@ -194,6 +203,15 @@ function FormPage() {
         return false;
       }
 
+      if(AYFid !== "AYF-6509CEF968A3D4E35515A5D0" && AYFid.slice(0, 3) !== "AYF"){
+        alert("Invalid AYF Membership ID")
+        return false
+      }
+      
+      // if(AYFid.slice(0, 3) !== "AYF") {
+      //   alert("Membership ID must start with 'AYF'");
+      // }
+
       if (
         firstNameValue.length === 0 ||
         lastNameValue.length === 0 ||
@@ -202,7 +220,8 @@ function FormPage() {
         stateOfOriginValue.length === 0 ||
         // businessInterestRefValue.length === 0 ||
         lgaRefValue.length === 0 ||
-        phoneNumber.length === 0
+        phoneNumber.length === 0 ||
+        AYFid.length === 0
       ) {
         alert("Input is invalid. Please check your input.")
         return;
@@ -271,6 +290,7 @@ function FormPage() {
         placeholder="+1234567890" // You can set a placeholder with a sample country code
         maxLength={15}
         name="phone_number"
+        required
         // ref={phoneNo}
       />
 
@@ -318,7 +338,7 @@ function FormPage() {
           </select>
 
           {isAYFMember && (
-            <input type='text' placeholder='AYF Membership ID' required></input>
+            <input type='text' value={AYFid} placeholder='AYF Membership ID' onChange={handle_members_id} maxLength="28" required></input>
           )}
 
           {/* <select name="business_interest" ref={businessInterestRef}>
