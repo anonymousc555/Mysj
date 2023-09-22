@@ -35,6 +35,16 @@ function FormPage() {
     setAYFId(id)
   }
 
+  const handleSelectChange = (event) => {
+    const selectedValue = event.target.value;
+    if (selectedValue === "AYF Member") {
+      setIsAYFMember(true)
+    }
+    else{
+      setIsAYFMember(false)
+    }
+  }
+
   
 
   const [state, setState] = useState(null);
