@@ -16,7 +16,7 @@ const [error, setError] = useState(false)
 const handleClose = () => setError(false);
 
 
-   const textRef = useRef()
+  //  const textRef = useRef()
 
   useEffect(() => {
 let content = '';
@@ -30,11 +30,11 @@ fetch(`https://payment.flashticketpro.com/get_user/${id}`)
             for (const key in data) {
                 if (data.hasOwnProperty(key) && !excludedFields.includes(key)) {
                     const value = data[key];
-          if (textRef.current) {
+        //   if (textRef.current) {
         
-          content += `${key}: ${value}\n`;
-        }
-      textRef.current.textContent = content;
+        //   content += `${key}: ${value}\n`;
+        // }
+      // textRef.current.textContent = content;
      setShow(true)
                 }
             }
@@ -54,7 +54,7 @@ fetch(`https://payment.flashticketpro.com/get_user/${id}`)
           <Header />
 {show &&
 <>
-          <div ref={textRef}> </div>
+          {/* <div ref={textRef}> </div> */}
       <div className='success-page'>
         <h1>You have successfully purchased your Ticket.🥳🎉</h1>
 	<h1> An email will be sent to you containing your Ticket details</h1>    
