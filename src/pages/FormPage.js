@@ -5,22 +5,23 @@ import Footer from '../components/Footer';
 import data1 from '../state-lgas';
 import businessInterest from '../business-interest';
 import 'react-phone-input-2/lib/style.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import PhoneInput from 'react-phone-input-2';
 
 function FormPage() {
-
   const [phoneNumber, setPhoneNumber] = useState('');
 
   // Function to handle changes in the phone number input
   const handlePhoneNumberChange = (e) => {
     let inputPhoneNumber = e.target.value;
 
-  //   // Remove any non-numeric characters (except '+')
+    // Remove any non-numeric characters (except '+')
     inputPhoneNumber = inputPhoneNumber.replace(/[^0-9+]/g, '');
 
-  //   // Ensure that the '+' sign is at the beginning of the input
+    // Ensure that the '+' sign is at the beginning of the input
     if (inputPhoneNumber.startsWith('+')) {
       setPhoneNumber(inputPhoneNumber);
     } else {
@@ -41,7 +42,6 @@ function FormPage() {
   const handleClose = () => setShow(false);
   const handleCloseSuc = () => setshowSuc(false);
     
-    // const [phoneNumber, setPhoneNumber] = useState("");
 
     function generateRandomString(length) {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -102,7 +102,7 @@ function FormPage() {
     const [firstNameValue, setFirstNameValue] = useState(""); 
     const [lastNameValue, setLastNameValue] = useState(""); 
     const [emailValue, setEmailValue] = useState(""); 
-    // const [phoneNoValue, setPhoneNoValue] = useState("");
+    const [phoneNoValue, setPhoneNoValue] = useState("");
     const [stateOfOriginValue, setStateOfOriginValue] = useState(""); 
     const [lgaRefValue, setLgaRefValue] = useState(""); 
     const [businessInterestRefValue, setBusinessInterestRefValue] = useState(""); 
@@ -113,7 +113,7 @@ function FormPage() {
     const firstName = useRef();
     const lastName = useRef();
     const email = useRef();
-    // const phoneNo = useRef();
+    const phoneNo = useRef();
     const stateOfOrigin = useRef();
     const lgaRef = useRef();
     const businessInterestRef = useRef();
@@ -145,7 +145,6 @@ function FormPage() {
       };
   
       ticketValue.addEventListener('input', (event) => handleInput(event, setTicketTypeValue));
-      // phoneNoValue.addEventListener('input', (event) => handleInput(event, setPhoneNoValue));
       firstNameValue.addEventListener('input', (event) => handleInput(event, setFirstNameValue));
       lastNameValue.addEventListener('input', (event) => handleInput(event, setLastNameValue));
       emailValue.addEventListener('input', (event) => handleInput(event, setEmailValue));
@@ -154,7 +153,6 @@ function FormPage() {
       businessInterestRefValue.addEventListener('input', (event) => handleInput(event, setBusinessInterestRefValue));
       
       return () => {
-        // phoneNoValue.removeEventListener('input', (event) => handleInput(event, setPhoneNoValue));
         ticketValue.removeEventListener('input', (event) => handleInput(event, setTicketTypeValue));
         firstNameValue.removeEventListener('input', (event) => handleInput(event, setFirstNameValue));
         lastNameValue.removeEventListener('input', (event) => handleInput(event, setLastNameValue));
@@ -186,7 +184,7 @@ function FormPage() {
         stateOfOriginValue.length === 0 ||
         businessInterestRefValue.length === 0 ||
         lgaRefValue.length === 0 ||
-        phoneNumber.length === 0
+        phoneNumber.length > 14
       ) {
         alert("Input is invalid. Please check your input.")
         return;
@@ -197,7 +195,7 @@ function FormPage() {
       "unique_id": randomString,
       "first_name": firstNameValue,
       "last_name": lastNameValue,
-      // "phone_number": phoneNoValue,
+      "phone_number": phoneNumber,
       "email": emailValue,
       "state_of_origin": stateOfOriginValue,
       "lga": lgaRefValue,
@@ -229,7 +227,6 @@ function FormPage() {
         setaTag(true);
       })
       .catch(error => {
-        console.log(error);
         setShow(true);
       })
       .finally(() => {
@@ -255,7 +252,7 @@ function FormPage() {
         placeholder="+1234567890" // You can set a placeholder with a sample country code
         maxLength={15}
         name="phone_number"
-        // ref={phoneNo}
+        ref={phoneNo}
       />
 
           {/* <PhoneInput
@@ -265,7 +262,7 @@ function FormPage() {
             inputStyle={style}
             country={'ng'}
             value={phoneNumber}
-            onChange={(phone) => setPhoneNumber(phone)}
+            onChange={e=> setPhoneNumber(e.target.value)}
           /> */}
           <input
             type="email"

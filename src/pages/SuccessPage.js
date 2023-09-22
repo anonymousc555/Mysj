@@ -12,18 +12,14 @@ function SuccessPage() {
   const id = urlParams.get('id');
 
 const [show, setShow] = useState(true)
-const [error, setError] = useState(true)
+const [error, setError] = useState(false)
 const handleClose = () => setError(false);
 
 
    const textRef = useRef()
-   useEffect(() => {
-    console.log("ds",textRef.current)
-   })
 
   useEffect(() => {
 let content = '';
-    console.log(id);
 
 fetch(`https://payment.flashticketpro.com/get_user/${id}`)
 				.then((response) => response.json())
@@ -47,6 +43,7 @@ fetch(`https://payment.flashticketpro.com/get_user/${id}`)
 .catch((error) => {
 				// Error handling
         setShow(false)
+        setError(true)
 				});
 		}
 
@@ -57,7 +54,7 @@ fetch(`https://payment.flashticketpro.com/get_user/${id}`)
           <Header />
 {show &&
 <>
-          <p ref={textRef}>tgfd </p>
+          <div ref={textRef}> </div>
       <div className='success-page'>
         <h1>You have successfully purchased your Ticket.🥳🎉</h1>
 	<h1> An email will be sent to you containing your Ticket details</h1>    
