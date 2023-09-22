@@ -177,7 +177,7 @@ function FormPage() {
       event.preventDefault()
       let fee = null;
   
-      if (ticketTypeValue === "Summit Attendance") {
+      if (ticketTypeValue === "Summit Admittance") {
         fee = 10000;
       } else if (ticketTypeValue === "VIP") {
         fee = 250000;
@@ -314,7 +314,7 @@ function FormPage() {
 
           <select id="ticketType" name="ticket_types" required ref={ticketType} onChange={handleSelectChange}>
             <option value={null}>Ticket Type</option>
-            <option value="Summit Attendance">Summit admittance - N10K</option>
+            <option value="Summit Admittance">Summit Admittance - N10K</option>
             <option value="VIP">VIP Ticket - N250K</option>
             <option value="AYF Member">AYF Member - N7K</option>
           </select>
