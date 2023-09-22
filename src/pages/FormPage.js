@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import data1 from '../state-lgas';
-import businessInterest from '../business-interest';
+// import businessInterest from '../business-interest';
 import 'react-phone-input-2/lib/style.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,14 +20,22 @@ function FormPage() {
 
     // Remove any non-numeric characters (except '+')
     inputPhoneNumber = inputPhoneNumber.replace(/[^0-9+]/g, '');
+    setPhoneNumber(inputPhoneNumber)
 
-    // Ensure that the '+' sign is at the beginning of the input
+  //   // Ensure that the '+' sign is at the beginning of the input
     if (inputPhoneNumber.startsWith('+')) {
       setPhoneNumber(inputPhoneNumber);
     } else {
-      setPhoneNumber('+' + inputPhoneNumber);
+      setIsAYFMember(false);
     }
   };
+
+  const handle_members_id = (e) => {
+    const id = e.target.value;
+    setAYFId(id)
+  }
+
+  
 
   const [state, setState] = useState(null);
   const [showBtn, setShowBtn] = useState(true);
@@ -37,6 +45,7 @@ function FormPage() {
   const [aTag, setaTag] = useState(false)
   const [user, setUser] = useState({})
   const [aCont, setaCont] = useState("")
+  const [isAYFMember, setIsAYFMember] = useState("")
   const [isLoading, setisLoading] = useState(false)
 
   const handleClose = () => setShow(false);
@@ -104,8 +113,9 @@ function FormPage() {
     const [emailValue, setEmailValue] = useState(""); 
     const [phoneNoValue, setPhoneNoValue] = useState("");
     const [stateOfOriginValue, setStateOfOriginValue] = useState(""); 
-    const [lgaRefValue, setLgaRefValue] = useState(""); 
-    const [businessInterestRefValue, setBusinessInterestRefValue] = useState(""); 
+    const [lgaRefValue, setLgaRefValue] = useState("");
+    const [AYFid, setAYFId] = useState("")
+    // const [businessInterestRefValue, setBusinessInterestRefValue] = useState(""); 
 
     // input refs
 
@@ -116,7 +126,7 @@ function FormPage() {
     const phoneNo = useRef();
     const stateOfOrigin = useRef();
     const lgaRef = useRef();
-    const businessInterestRef = useRef();
+    // const businessInterestRef = useRef();
 
     // useEffect(() => {
     //   const stateOfOriginValue = stateOfOrigin.current;
@@ -138,7 +148,7 @@ function FormPage() {
       const emailValue = email.current;
       const stateOfOriginValue = stateOfOrigin.current;
       const lgaRefValue = lgaRef.current;
-      const businessInterestRefValue = businessInterestRef.current;
+      // const businessInterestRefValue = businessInterestRef.current;
   
       const handleInput = (event, setValue) => {
         setValue(event.target.value);
@@ -150,7 +160,7 @@ function FormPage() {
       emailValue.addEventListener('input', (event) => handleInput(event, setEmailValue));
       stateOfOriginValue.addEventListener('input', (event) => handleInput(event, setStateOfOriginValue));
       lgaRefValue.addEventListener('input', (event) => handleInput(event, setLgaRefValue));
-      businessInterestRefValue.addEventListener('input', (event) => handleInput(event, setBusinessInterestRefValue));
+      // businessInterestRefValue.addEventListener('input', (event) => handleInput(event, setBusinessInterestRefValue));
       
       return () => {
         ticketValue.removeEventListener('input', (event) => handleInput(event, setTicketTypeValue));
@@ -159,7 +169,7 @@ function FormPage() {
         emailValue.removeEventListener('input', (event) => handleInput(event, setEmailValue));
         stateOfOriginValue.removeEventListener('input', (event) => handleInput(event, setStateOfOriginValue));
         lgaRefValue.removeEventListener('input', (event) => handleInput(event, setLgaRefValue));
-        businessInterestRefValue.removeEventListener('input', (event) => handleInput(event, setBusinessInterestRefValue));
+        // businessInterestRefValue.removeEventListener('input', (event) => handleInput(event, setBusinessInterestRefValue));
       };
     }, []);
   
@@ -171,10 +181,21 @@ function FormPage() {
         fee = 10000;
       } else if (ticketTypeValue === "VIP") {
         fee = 250000;
+      } else if (ticketTypeValue === "AYF Member") {
+        fee = 7000;
       } else {
         alert("pls select a type")
         return false;
       }
+
+      if(AYFid !== "AYF-6509CEF968A3D4E35515A5D0" && AYFid.slice(0, 3) !== "AYF"){
+        alert("Invalid AYF Membership ID")
+        return false
+      }
+      
+      // if(AYFid.slice(0, 3) !== "AYF") {
+      //   alert("Membership ID must start with 'AYF'");
+      // }
 
       if (
         firstNameValue.length === 0 ||
@@ -182,9 +203,9 @@ function FormPage() {
         emailValue.length === 0 ||
         !emailValue.includes("@") ||
         stateOfOriginValue.length === 0 ||
-        businessInterestRefValue.length === 0 ||
+        // businessInterestRefValue.length === 0 ||
         lgaRefValue.length === 0 ||
-        phoneNumber.length > 14
+        phoneNumber.length === 0
       ) {
         alert("Input is invalid. Please check your input.")
         return;
@@ -200,7 +221,7 @@ function FormPage() {
       "state_of_origin": stateOfOriginValue,
       "lga": lgaRefValue,
       "ticket_types": ticketTypeValue,
-      "business_interest": businessInterestRefValue,
+      // "business_interest": businessInterestRefValue,
       "fee": fee,
       "number": 1
     }
@@ -252,7 +273,7 @@ function FormPage() {
         placeholder="+1234567890" // You can set a placeholder with a sample country code
         maxLength={15}
         name="phone_number"
-        ref={phoneNo}
+        // ref={phoneNo}
       />
 
           {/* <PhoneInput
@@ -291,18 +312,23 @@ function FormPage() {
             ))}
           </select>
 
-          <select id="ticketType" name="ticket_types" required ref={ticketType}>
+          <select id="ticketType" name="ticket_types" required ref={ticketType} onChange={handleSelectChange}>
             <option value={null}>Ticket Type</option>
             <option value="Summit Attendance">Summit admittance - N10K</option>
             <option value="VIP">VIP Ticket - N250K</option>
+            <option value="AYF Member">AYF Member - N7K</option>
           </select>
 
-          <select name="business_interest" ref={businessInterestRef}>
+          {isAYFMember && (
+            <input type='text' value={AYFid} placeholder='AYF Membership ID' onChange={handle_members_id} maxLength="28" required></input>
+          )}
+
+          {/* <select name="business_interest" ref={businessInterestRef}>
             <option value={null}>Business Interest</option>
             {businessInterest.map((interests) => (
               <option>{interests}</option>
             ))}
-          </select>
+          </select> */}
               {showBtn && 
           <button type="submit">Submit</button>
               }
