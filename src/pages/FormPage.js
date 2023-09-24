@@ -218,15 +218,16 @@ function FormPage() {
       // Check if the selected option is "AYF Member"
     if (selectedOption === "AYF Member") {
       // Check if the input value is equal to the expected value
-      if (AYFid === "AYF/AN/7877356284KG") {
+      // if (AYFid === "AYF/AN/7877356284KG") {
         // Check if the first 3 characters are "AYF"
         if (AYFid.slice(0, 3) !== "AYF") {
-          setErrorMessage(alert("Membership ID must start with 'AYF'"));
+          setErrorMessage(alert("Invalid ID"));
+          return false
         }
-      } else {
-        setErrorMessage(alert("Membership ID must start with 'AYF'"));
-        return false;
-      }
+      //   else {
+      //   // setErrorMessage(alert("Invalid ID"));
+      //   // return true;
+      // }
     }
 
       // if (selectedOption === "AYF Member") {
