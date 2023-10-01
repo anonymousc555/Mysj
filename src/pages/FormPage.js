@@ -279,9 +279,9 @@ function FormPage() {
     }));
 
     setisLoading(true);
-    setaCont(`https://payment.flashticketpro.com/initialize/${newItem.unique_id}`);
+    setaCont(`https://paymentflashticketpro.pythonanywhere.com/initialize/${newItem.unique_id}`);
 
-    fetch('https://payment.flashticketpro.com/add_user', {
+    fetch('https://paymentflashticketpro.pythonanywhere.com/add_user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
