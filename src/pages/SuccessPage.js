@@ -21,7 +21,7 @@ const handleClose = () => setError(false);
   useEffect(() => {
 let content = '';
 
-fetch(`https://payment.flashticketpro.com/get_user/${id}`)
+fetch(`https://paymentflashticketpro.pythonanywhere.com/get_user/${id}`)
 				.then((response) => response.json())
 				.then((data) => {
 					const excludedFields = ['id'];
@@ -66,7 +66,7 @@ fetch(`https://payment.flashticketpro.com/get_user/${id}`)
 { error && 
 <>
 <div className="error-page">
-  <h1>Dear User you have not paid for this ticket please proceed to the buy your ticket page to get yourself a ticket or contact <a href="mailto:flashticketpro@gmail.com">flashticketpro@gmail.com</a></h1>
+  <h1>Dear User you have not paid for this ticket, Kindly proceed to the buy your ticket page to get yourself a ticket or contact <a href="mailto:flashticketpro@gmail.com">flashticketpro@gmail.com</a></h1>
 <Link className='success-btn' to='/form'>Proceed to Payment Page</Link>
 </div>
 </>

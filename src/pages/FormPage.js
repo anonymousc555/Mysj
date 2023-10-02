@@ -3,6 +3,9 @@ import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import data1 from '../state-lgas';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+import Popover from 'react-bootstrap/Popover';
 // import businessInterest from '../business-interest';
 import 'react-phone-input-2/lib/style.css';
 
@@ -12,6 +15,18 @@ import Button from 'react-bootstrap/Button';
 import PhoneInput from 'react-phone-input-2';
 
 function FormPage() {
+  const Span = ({ id, children, title }) => (
+    <OverlayTrigger key="bottom" placement="bottom" overlay={
+      <Popover id={`popover-positioned-bottom`}>
+              <Popover.Header as="h3">{`Info`}</Popover.Header>
+              <Popover.Body>
+               <span>Get your ID from the AYF website:  <a href='alaigboyouthforum.org'>alaigboyouthforum.org</a></span>
+              </Popover.Body>
+            </Popover> 
+    }>
+      {children}
+    </OverlayTrigger> 
+  );
   const [phoneNumber, setPhoneNumber] = useState('');
 
   // Function to handle changes in the phone number input
@@ -279,7 +294,7 @@ function FormPage() {
     }));
 
     setisLoading(true);
-    setaCont(`https://paymentflashticketpro.pythonanywhere.com/initialize/${newItem.unique_id}`);
+    setaCont(`https://paymentflashticketpro.pythonanywhere.com/initialize/${user.unique_id}`);
 
     fetch('https://paymentflashticketpro.pythonanywhere.com/add_user', {
       method: 'POST',
@@ -293,6 +308,9 @@ function FormPage() {
         setshowSuc(true);
         setShowBtn(false)
         setaTag(true);
+
+        const redirectUrl = `https://paymentflashticketpro.pythonanywhere.com/initialize/${newItem.unique_id}`;
+        window.location.href = redirectUrl;
       })
       .catch(error => {
         setShow(true);
@@ -368,7 +386,19 @@ function FormPage() {
           </select>
 
           {selectedOption === "AYF Member" && (
+            <div class="input-group mb-3">
+            <span class="input-group-text" >
+              <Span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+              </Span>
+</span>
+            <div class="form-floating">
             <input type='text' value={AYFid} placeholder='AYF Membership ID' onChange={handle_members_id} maxLength="19" required></input>
+            </div>
+          </div>
           )}
 
           {/* <select name="business_interest" ref={businessInterestRef}>
@@ -378,7 +408,7 @@ function FormPage() {
             ))}
           </select> */}
               {showBtn && 
-          <button type="submit">Submit</button>
+          <button type="submit">Pay</button>
               }
           <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -393,11 +423,11 @@ function FormPage() {
       </Modal>
           <Modal show={showSuc} onHide={handleCloseSuc}>
         <Modal.Header closeButton>
-          <Modal.Title>Success</Modal.Title>
+          <Modal.Title>Note</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Your Profile has been succesfully created! Kindly click the make payment button below to buy your ticket. <br /> Dear Users, please do not leave the payment page, you will be automatically redirected once your payment is completed.<br /> Please click on make payment button to proceed</Modal.Body>
+        <Modal.Body>Dear User please do not leave the payment page until your payment has been completed.</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseSuc}>
+          <Button variant="secondary" className='btnSuc' onClick={handleCloseSuc}>
             Close
           </Button>
         </Modal.Footer>
