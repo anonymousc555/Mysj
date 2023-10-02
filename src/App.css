@@ -284,6 +284,10 @@ header ul li .nav-link{
   background-color: #e4a00eff !important;
   border: none;
 }
+.popover .header{
+  background-color: #e4a00eff !important;
+  color: #fff;
+}
 /* ==== Success Page ==== */
 .success-page,
 .error-page{

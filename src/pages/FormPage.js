@@ -18,7 +18,9 @@ function FormPage() {
   const Span = ({ id, children, title }) => (
     <OverlayTrigger key="bottom" placement="bottom" overlay={
       <Popover id={`popover-positioned-bottom`}>
-              <Popover.Header as="h3">{`Info`}</Popover.Header>
+              <Popover.Header as="h3" className='header'>
+                Info
+              </Popover.Header>
               <Popover.Body>
                <span>Get your ID from the AYF website:  <a href='alaigboyouthforum.org'>alaigboyouthforum.org</a></span>
               </Popover.Body>
