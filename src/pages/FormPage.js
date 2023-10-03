@@ -237,7 +237,7 @@ function FormPage() {
       // Check if the input value is equal to the expected value
       // if (AYFid === "AYF/AN/7877356284KG") {
         // Check if the first 3 characters are "AYF"
-        if (AYFid.slice(0, 3) !== "AYF") {
+        if (AYFid.slice(0, 3) !== "AYF" && AYFid.length !==19) {
           setErrorMessage(alert("Invalid ID"));
           return false
         }
