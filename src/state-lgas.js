@@ -90,10 +90,92 @@ const data1 = [
         "Uruan",
         "Urue-Offong/Oruko",
         "Uyo"
-      ]
+      ],
     },
   },
 
+  {
+    state: {
+      name: "Bayelsa",
+      alias: "bayelsa",
+      lgas: [
+        "Brass",
+        "Ekeremor",
+        "Kolokuma/Opokuma",
+        "Nembe",
+        "Ogbia",
+        "Sagbama",
+        "Southern Ijaw",
+        "Yenagoa"
+      ],
+    },
+  },
+  
+  {
+    state: {
+      name: "Benue",
+      alias: "benue",
+      lgas: [
+        "Agatu",
+        "Apa",
+        "Ado",
+        "Buruku",
+        "Gboko",
+        "Guma",
+        "Gwer East",
+        "Gwer West",
+        "Katsina-Ala",
+        "Konshisha",
+        "Kwande",
+        "Logo",
+        "Makurdi",
+        "Obi",
+        "Ogbadibo",
+        "Ohimini",
+        "Oju",
+        "Okpokwu",
+        "Oturkpo",
+        "Tarka",
+        "Ukum",
+        "Ushongo",
+        "Vandeikya"
+      ],
+    },
+  },
+
+  {
+    state: {
+      name: "Delta",
+      alias: "delta",
+      lgas: [
+        "Aniocha North",
+        "Aniocha South",
+        "Bomadi",
+        "Burutu",
+        "Ethiope West",
+        "Ethiope East",
+        "Ika North East",
+        "Ika South",
+        "Isoko North",
+        "Isoko South",
+        "Ndokwa East",
+        "Ndokwa West",
+        "Okpe",
+        "Oshimili North",
+        "Oshimili South",
+        "Patani",
+        "Sapele",
+        "Udu",
+        "Ughelli North",
+        "Ukwuani",
+        "Ughelli South",
+        "Uvwie",
+        "Warri North",
+        "Warri South",
+        "Warri South West"
+      ],
+    },
+  },
   
   {
     state: {
@@ -139,7 +221,6 @@ const data1 = [
       ],
     },
   },
-  
   {
     state: {
       name: 'Imo',
@@ -172,6 +253,68 @@ const data1 = [
         'Owerri North',
         'Owerri West',
         'Unuimo',
+      ],
+    },
+  },
+
+  {
+    state: {
+      mame: "Kogi",
+      alias: "kogi",
+      lgas: [
+        "Ajaokuta",
+        "Adavi",
+        "Ankpa",
+        "Bassa",
+        "Dekina",
+        "Ibaji",
+        "Idah",
+        "Igalamela Odolu",
+        "Ijumu",
+        "Kogi",
+        "Kabba/Bunu",
+        "Lokoja",
+        "Ofu",
+        "Mopa Muro",
+        "Ogori/Magongo",
+        "Okehi",
+        "Okene",
+        "Olamaboro",
+        "Omala",
+        "Yagba East",
+        "Yagba West"
+      ],
+    },
+  },
+
+  {
+    state: {
+      name: "Rivers",
+      alias: "rivers",
+      lgas: [
+        "Abua/Odual",
+        "Ahoada East",
+        "Ahoada West",
+        "Andoni",
+        "Akuku-Toru",
+        "Asari-Toru",
+        "Bonny",
+        "Degema",
+        "Emuoha",
+        "Eleme",
+        "Ikwerre",
+        "Etche",
+        "Gokana",
+        "Khana",
+        "Obio/Akpor",
+        "Ogba/Egbema/Ndoni",
+        "Ogu/Bolo",
+        "Okrika",
+        "Omuma",
+        "Opobo/Nkoro",
+        "Oyigbo",
+        "Port Harcourt",
+        "Tai",
       ],
     },
   },
