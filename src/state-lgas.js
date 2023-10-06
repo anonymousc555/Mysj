@@ -100,11 +100,11 @@ const data1 = [
 
   {
     state: {
-       name: "Akwa Ibom",
-       alias: "akwa_ibom",
+       name: 'Akwa Ibom',
+       alias: 'akwa_ibom',
        lgas: [
-        "Abak",
-        "Eastern Obolo",
+        'Abak',
+        'Eastern Obolo',
         "Eket",
         "Esit Eket",
         "Essien Udim",
