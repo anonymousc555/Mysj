@@ -53,6 +53,48 @@ const data1 = [
       ],
     },
   },
+
+  {
+    state: {
+       name: 'Akwa Ibom',
+       alias: 'akwa_ibom',
+       lgas: [
+        'Abak',
+        'Eastern Obolo',
+        "Eket",
+        "Esit Eket",
+        "Essien Udim",
+        "Etim Ekpo",
+        "Etinan",
+        "Ibeno",
+        "Ibesikpo Asutan",
+        "Ibiono-Ibom",
+        "Ikot Abasi",
+        "Ika",
+        "Ikono",
+        "Ikot Ekpene",
+        "Ini",
+        "Mkpat-Enin",
+        "Itu",
+        "Mbo",
+        "Nsit-Atai",
+        "Nsit-Ibom",
+        "Nsit-Ubium",
+        "Obot Akara",
+        "Okobo",
+        "Onna",
+        "Oron",
+        "Udung-Uko",
+        "Ukanafun",
+        "Oruk Anam",
+        "Uruan",
+        "Urue-Offong/Oruko",
+        "Uyo"
+      ]
+    },
+  },
+
+  
   {
     state: {
       name: 'Enugu',
@@ -95,46 +137,6 @@ const data1 = [
         'Ohaukwu',
         'Onicha',
       ],
-    },
-  },
-
-  {
-    state: {
-       name: 'Akwa Ibom',
-       alias: 'akwa_ibom',
-       lgas: [
-        'Abak',
-        'Eastern Obolo',
-        "Eket",
-        "Esit Eket",
-        "Essien Udim",
-        "Etim Ekpo",
-        "Etinan",
-        "Ibeno",
-        "Ibesikpo Asutan",
-        "Ibiono-Ibom",
-        "Ikot Abasi",
-        "Ika",
-        "Ikono",
-        "Ikot Ekpene",
-        "Ini",
-        "Mkpat-Enin",
-        "Itu",
-        "Mbo",
-        "Nsit-Atai",
-        "Nsit-Ibom",
-        "Nsit-Ubium",
-        "Obot Akara",
-        "Okobo",
-        "Onna",
-        "Oron",
-        "Udung-Uko",
-        "Ukanafun",
-        "Oruk Anam",
-        "Uruan",
-        "Urue-Offong/Oruko",
-        "Uyo"
-      ]
     },
   },
   
