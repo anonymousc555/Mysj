@@ -259,7 +259,7 @@ const data1 = [
 
   {
     state: {
-      mame: "Kogi",
+      mame: "Kog",
       alias: "kogi",
       lgas: [
         "Ajaokuta",
