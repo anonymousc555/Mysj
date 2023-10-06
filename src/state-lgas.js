@@ -259,6 +259,36 @@ const data1 = [
 
   {
     state: {
+      name: "Kogi",
+      alias: "kogi",
+      lgas: [
+        "Ajaokuta",
+        "Adavi",
+        "Ankpa",
+        "Bassa",
+        "Dekina",
+        "Ibaji",
+        "Idah",
+        "Igalamela Odolu",
+        "Ijumu",
+        "Kogi",
+        "Kabba/Bunu",
+        "Lokoja",
+        "Ofu",
+        "Mopa Muro",
+        "Ogori/Magongo",
+        "Okehi",
+        "Okene",
+        "Olamaboro",
+        "Omala",
+        "Yagba East",
+        "Yagba West",
+      ],
+    },
+  },
+  
+  {
+    state: {
       name: "Rivers",
       alias: "rivers",
       lgas: [
