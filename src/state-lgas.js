@@ -89,7 +89,7 @@ const data1 = [
         "Oruk Anam",
         "Uruan",
         "Urue-Offong/Oruko",
-        "Uyo"
+        "Uyo",
       ],
     },
   },
@@ -282,7 +282,7 @@ const data1 = [
         "Olamaboro",
         "Omala",
         "Yagba East",
-        "Yagba West"
+        "Yagba West",
       ],
     },
   },
