@@ -384,7 +384,7 @@ function FormPage() {
             <option value={null}>Ticket Type</option>
             <option value="Summit Admittance">Summit Admittance - N10K</option>
             <option value="VIP">VIP Ticket - N250K</option>
-            <option value="AYF Member">AYF Member - N7K</option>
+           
           </select>
 
           {selectedOption === "AYF Member" && (
