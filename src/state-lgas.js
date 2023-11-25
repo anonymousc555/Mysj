@@ -182,6 +182,8 @@ const data1 = [
       name: 'Enugu',
       alias: 'enugu',
       lgas: [
+        'Awgu',
+        'Aninri',
         'Enugu East',
         'Enugu North',
         'Enugu South',
